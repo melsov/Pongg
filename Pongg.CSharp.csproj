@@ -72,10 +72,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Ball.cs" />
-    <Compile Include="Assets\BeADoor.cs" />
-    <Compile Include="Assets\BeAHouse.cs" />
-    <Compile Include="Assets\MouseBoss.cs" />
+    <Compile Include="Assets\Scripts\Ball.cs" />
+    <Compile Include="Assets\Scripts\BeADoor.cs" />
+    <Compile Include="Assets\Scripts\BeAHouse.cs" />
+    <Compile Include="Assets\Scripts\Catapult.cs" />
+    <Compile Include="Assets\Scripts\MouseBoss.cs" />
+    <Compile Include="Assets\Scripts\Sandwich.cs" />
+    <Compile Include="Assets\Scripts\StingRay.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
