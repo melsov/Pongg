@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Cata2.unity
+- path: Assets/golf.unity
   isLoaded: 1
   isActive: 1
