@@ -6,13 +6,18 @@ public class LookCam : MonoBehaviour {
 
     public Transform target;
     private Vector3 offset;
+    public Vector3 lookOffset = new Vector3(0f, 4f, 0f);
 
 	void Start () {
         setOffset();
 	}
 
+    private BeAGolfBall getGolfBall() {
+        return target.GetComponent<BeAGolfBall>();
+    }
+
     private void setOffset() {
-        offset = target.position - transform.position;
+        offset = transform.position - target.position;
     }
 
     public void goToTarget() {
@@ -21,6 +26,6 @@ public class LookCam : MonoBehaviour {
         }
 
         transform.position = target.position + offset;
-        
+
     }
 }

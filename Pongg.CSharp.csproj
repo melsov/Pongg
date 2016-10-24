@@ -78,6 +78,7 @@
     <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxChanger.cs" />
     <Compile Include="Assets\FarlandSkies\Demo\Scripts\Skybox\SkyboxRotator.cs" />
     <Compile Include="Assets\Golfer.cs" />
+    <Compile Include="Assets\HoleBeacon.cs" />
     <Compile Include="Assets\LookCam.cs" />
     <Compile Include="Assets\Scripts\Ball.cs" />
     <Compile Include="Assets\Scripts\BeADoor.cs" />
