@@ -16,8 +16,16 @@ public class LookCam : MonoBehaviour {
         return target.GetComponent<BeAGolfBall>();
     }
 
+    private HoleBeacon getHoleBeacon() {
+        return getGolfBall().hole;
+    }
+
     private void setOffset() {
         offset = transform.position - target.position;
+    }
+
+    private Vector3 holeToBall() {
+        return getGolfBall().transform.position - getHoleBeacon().transform.position;
     }
 
     public void goToTarget() {
@@ -25,7 +33,22 @@ public class LookCam : MonoBehaviour {
             throw new System.Exception("Hey! No target for look cam to go to");
         }
 
-        transform.position = target.position + offset;
+        Vector3 off = offset;
+        /*
+         * TODO: align off with holeToBall direction
+         */
+        transform.position = target.position + off;
+    }
 
+    public void Update() {
+        goToTarget();
+        lookSomewhere();
+    }
+
+    private void lookSomewhere() {
+        Vector3 hole = getHoleBeacon().transform.position;
+        Vector3 lk = hole - transform.position;
+        Quaternion look = Quaternion.LookRotation(lk);
+        transform.rotation = look;
     }
 }
